@@ -1,0 +1,19 @@
+{
+  "compact": "PASS: 437 compact UI and navigation assertions",
+  "practice": "PASS: 559 learning interaction assertions",
+  "full": "PASS: 1233 Android interaction assertions",
+  "adaptation": {
+    "profiles": 6,
+    "assertions": 306
+  },
+  "apk": {
+    "version": "0.35",
+    "versionCode": 69,
+    "author": "快转风景Nevermore",
+    "by": "By 快转风景Nevermore",
+    "package": "local.screenstudy.mac",
+    "debuggable": false,
+    "sha256": "37cc2147341765edb9682cdf2d895cfcc6f013cc918b415e6368ed244214413f"
+  },
+  "android_runtime": "13 / API 33"
+}
