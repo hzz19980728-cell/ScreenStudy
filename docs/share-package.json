@@ -1,0 +1,30 @@
+{
+  "version": "0.35",
+  "contents": [
+    {
+      "name": "01_离线日语语音_1.13.8.apk",
+      "size": 154733464,
+      "sha256": "ac65bfeba3b82d05303b153ee830d5c347858c02765254ef4bcf9b00e07ca22a"
+    },
+    {
+      "name": "02_双屏日语伴读_0.35.apk",
+      "size": 60772663,
+      "sha256": "37cc2147341765edb9682cdf2d895cfcc6f013cc918b415e6368ed244214413f"
+    },
+    {
+      "name": "使用说明.txt",
+      "size": 657,
+      "sha256": "a3232e98ff1eed2c0f153237756b103029c50123d2c489c15ea9d595af869d43"
+    }
+  ],
+  "voice": {
+    "source": "https://huggingface.co/csukuangfj2/sherpa-onnx-apk/resolve/main/tts-engine-new/1.13.8/sherpa-onnx-1.13.8-arm64-v8a-jpn-tts-engine-sherpa-onnx-supertonic-3-tts-int8-2026-05-11.apk",
+    "sha256": "ac65bfeba3b82d05303b153ee830d5c347858c02765254ef4bcf9b00e07ca22a",
+    "version": "1.13.8",
+    "package": "com.k2fsa.sherpa.onnx.tts.engine",
+    "model": "supertonic-3-int8",
+    "signature_sha256": "030a90bdd6e4c5eef1e161acfa6455a912c45cb2423b64df449ca88fdee097bb"
+  },
+  "offline_voice_test": "PASS: bundled offline Japanese voice synthesized 122284 bytes; ScreenStudy SpeechReader completed real playback without network or extra voice downloads",
+  "zip_sha256": "562290130116627d00e0e95b4897070965b315094860db73f847534a98a9494f"
+}
