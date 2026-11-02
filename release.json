@@ -1,9 +1,9 @@
 {
-  "version": "0.36",
-  "versionCode": 70,
+  "version": "0.37",
+  "versionCode": 71,
   "author": "快转风景Nevermore",
   "by": "By 快转风景Nevermore",
   "package": "local.screenstudy.mac",
   "debuggable": false,
-  "sha256": "8d514398d767bac59ff2cdf72dd308d2c77d49408e5a5648fa5a3d3f378d9e9f"
+  "sha256": "9c894f22b1ff62164ea10dfb3df23ab55bc6135398b052978e81db6217210624"
 }

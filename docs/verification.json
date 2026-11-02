@@ -1,19 +1,72 @@
 {
-  "version": "0.36",
+  "version": "0.37",
   "apk": {
-    "version": "0.36",
-    "versionCode": 70,
+    "version": "0.37",
+    "versionCode": 71,
     "author": "快转风景Nevermore",
     "by": "By 快转风景Nevermore",
     "package": "local.screenstudy.mac",
     "debuggable": false,
-    "sha256": "8d514398d767bac59ff2cdf72dd308d2c77d49408e5a5648fa5a3d3f378d9e9f"
+    "sha256": "9c894f22b1ff62164ea10dfb3df23ab55bc6135398b052978e81db6217210624"
   },
   "android_runtime": "13 / API 33",
   "checks": {
-    "voice-settings": "PASS: 15 voice settings, return-state and real Japanese playback assertions",
-    "compact": "PASS: 437 compact UI and navigation assertions"
+    "reading-typography": "PASS: 513 reading typography, persistence and word-layout assertions",
+    "small-window-typography": "PASS: 514 reading typography, persistence and word-layout assertions",
+    "voice-selection": "PASS: 20 in-app voice selection and real offline playback assertions",
+    "compact": "PASS: 437 compact UI and navigation assertions",
+    "full-interaction": "PASS: 1233 Android interaction assertions (justified reading)",
+    "six-display-profiles": "PASS: 306 adaptive companion-window assertions across six width, height, density and font-scale profiles"
   },
-  "thor_route_resolves": "com.android.settings/.Settings$TextToSpeechSettingsActivity",
-  "scope": "voice settings navigation, stale-control protection, preserved return state, real Japanese speech after engine selection, and compact UI/navigation regression"
+  "scope": "App-local engine selection and real offline Japanese playback; 12–34sp fonts; proportional word frames, padding and line heights; real tap selection; four alignments and spacing; CJK justification with unchanged text and verified drawing advance; full interaction suite with justified reading enabled; six secondary-display profiles. The original reported device still needs model/Android details and retesting.",
+  "display_profiles": [
+    {
+      "width": 1240,
+      "height": 1080,
+      "dpi": 369,
+      "fontScale": 1.0,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    },
+    {
+      "width": 960,
+      "height": 720,
+      "dpi": 320,
+      "fontScale": 1.0,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    },
+    {
+      "width": 720,
+      "height": 960,
+      "dpi": 320,
+      "fontScale": 1.0,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "dpi": 240,
+      "fontScale": 1.0,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    },
+    {
+      "width": 960,
+      "height": 640,
+      "dpi": 320,
+      "fontScale": 1.0,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    },
+    {
+      "width": 960,
+      "height": 720,
+      "dpi": 320,
+      "fontScale": 1.3,
+      "result": "PASS: 51 adaptive companion-window assertions"
+    }
+  ],
+  "small_window_profile": {
+    "width": 960,
+    "height": 640,
+    "dpi": 320,
+    "fontScale": 1.3
+  }
 }
