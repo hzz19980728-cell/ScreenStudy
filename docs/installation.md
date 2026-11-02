@@ -1,6 +1,6 @@
 # 下载与安装
 
-[点击下载完整包](https://github.com/hzz19980728-cell/ScreenStudy/releases/download/v0.37/ScreenStudy-0.37-Share.zip)，解压后先装 `01_离线日语语音_1.13.8.apk`，再装 `02_双屏日语伴读_0.37.apk`。
+[点击下载完整包](https://github.com/hzz19980728-cell/ScreenStudy/releases/download/v0.38/ScreenStudy-0.38-Share.zip)，解压后先装 `01_离线日语语音_1.13.8.apk`，再装 `02_双屏日语伴读_0.38.apk`。
 
 安装时按系统提示允许当前文件管理器安装应用。桌面名称是“双屏日语伴读”。老用户直接覆盖安装伴读，保留学习数据。
 

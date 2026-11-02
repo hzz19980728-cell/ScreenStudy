@@ -1,24 +1,32 @@
 {
-  "version": "0.37",
+  "version": "0.38",
   "apk": {
-    "version": "0.37",
-    "versionCode": 71,
+    "version": "0.38",
+    "versionCode": 72,
     "author": "快转风景Nevermore",
     "by": "By 快转风景Nevermore",
     "package": "local.screenstudy.mac",
     "debuggable": false,
-    "sha256": "9c894f22b1ff62164ea10dfb3df23ab55bc6135398b052978e81db6217210624"
+    "sha256": "7fb2e6753a7fb6820e62cbda8674753c463ac27cb77e9e5683d49a56b55dd1ad"
   },
   "android_runtime": "13 / API 33",
   "checks": {
+    "long-text-runtime": "PASS: 25 real Japanese OCR and offline long-translation transport assertions",
     "reading-typography": "PASS: 513 reading typography, persistence and word-layout assertions",
-    "small-window-typography": "PASS: 514 reading typography, persistence and word-layout assertions",
     "voice-selection": "PASS: 20 in-app voice selection and real offline playback assertions",
     "compact": "PASS: 437 compact UI and navigation assertions",
     "full-interaction": "PASS: 1233 Android interaction assertions (justified reading)",
     "six-display-profiles": "PASS: 306 adaptive companion-window assertions across six width, height, density and font-scale profiles"
   },
-  "scope": "App-local engine selection and real offline Japanese playback; 12–34sp fonts; proportional word frames, padding and line heights; real tap selection; four alignments and spacing; CJK justification with unchanged text and verified drawing advance; full interaction suite with justified reading enabled; six secondary-display profiles. The original reported device still needs model/Android details and retesting.",
+  "unit_checks": [
+    "PASS: 325 stability and text-preservation assertions",
+    "PASS: 33 frame-cache and retry assertions",
+    "PASS: 36 OCR layout and preservation assertions",
+    "PASS: observed Thor ruby and speaker boxes excluded",
+    "PASS: 87 romaji answer checks",
+    "PASS: 48 dense OCR, inline-fragment and long-translation policy assertions"
+  ],
+  "scope": "Real bundled Japanese OCR on a generated large-heading/small-body fixture; full preservation of engine-recognized body rows. Actual translator request and response handling exercised with offline HTTP fixtures, including provider-marked incomplete results. Existing typography, engine selection, offline playback and interaction checks rerun. No live provider semantic-quality evaluation.",
   "display_profiles": [
     {
       "width": 1240,
@@ -63,10 +71,15 @@
       "result": "PASS: 51 adaptive companion-window assertions"
     }
   ],
-  "small_window_profile": {
-    "width": 960,
-    "height": 640,
-    "dpi": 320,
-    "fontScale": 1.3
+  "physical_device": {
+    "model": "AYN Thor",
+    "android": "13",
+    "installed_version": "0.38",
+    "checks": [
+      "Covered installation: exported pre/post backups have identical words, learning state and game profiles; only reading text/history and export timestamp changed.",
+      "In-app speech engine picker opens and accepts the bundled engine without exiting; TextToSpeech binds to the installed offline engine."
+    ],
+    "gameplay_status": "Extended game-page OCR comparison pending: upper display is off due to lid state. One pre-update game page observed; body intact, leading ellipsis misrecognized. No conclusion about long gameplay accuracy.",
+    "translation_status": "User chose Japanese OCR-only testing; no real translation API calls."
   }
 }
