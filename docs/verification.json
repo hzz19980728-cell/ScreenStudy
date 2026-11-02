@@ -75,11 +75,39 @@
     "model": "AYN Thor",
     "android": "13",
     "installed_version": "0.38",
+    "game": "Higurashi no Naku Koro ni Hou",
     "checks": [
-      "Covered installation: exported pre/post backups have identical words, learning state and game profiles; only reading text/history and export timestamp changed.",
-      "In-app speech engine picker opens and accepts the bundled engine without exiting; TextToSpeech binds to the installed offline engine."
+      "Covered installation: pre/post exported words, learning state and game profiles are identical.",
+      "In-app speech engine picker opens and accepts the bundled engine without exiting; TextToSpeech binds to the offline engine.",
+      "25 dialogue screens compared manually against upper/lower captures; no reader crash or complete body-row omission observed in this sample.",
+      "Long backlog output can scroll to its end and reach the translation button."
     ],
-    "gameplay_status": "Extended game-page OCR comparison pending: upper display is off due to lid state. One pre-update game page observed; body intact, leading ellipsis misrecognized. No conclusion about long gameplay accuracy.",
-    "translation_status": "User chose Japanese OCR-only testing; no real translation API calls."
+    "extended_gameplay": {
+      "started_at": "2026-11-02T17:48:08.432926+00:00",
+      "ended_at": "2026-11-02T18:12:31.906644+00:00",
+      "observed_seconds": 1463.5,
+      "dialogue_screens": 25,
+      "normal_dialogue_lines_per_screen": "1-3",
+      "extra_scenario": "Backlog range coverage, footer contamination and companion scrolling",
+      "capture_crop_normalized": [
+        0,
+        0.55,
+        1,
+        1
+      ]
+    },
+    "remaining_issues": [
+      "Single-character omissions and substitutions are present in saved original Japanese text, before reader layout.",
+      "Voicing marks, small kana, ellipses and an advance cursor can be misrecognized.",
+      "Full-screen backlog text outside the selected lower-half crop is not captured; footer controls inside the crop can be included."
+    ],
+    "raw_ocr_replay": {
+      "private_screenshots": 13,
+      "variants_per_image": 4,
+      "completed": true,
+      "finding": "The raw recognizer can omit the first character of the Japanese ochre-color word before OcrText cleanup. Cropping, scaling and binarization do not consistently improve every sample.",
+      "limitation": "Screenshot replay is diagnostic. Its pixels and output may differ from a live MediaProjection frame; it is not a general accuracy pass."
+    },
+    "translation_status": "Japanese OCR-only testing requested by user. No real translation API calls."
   }
 }
