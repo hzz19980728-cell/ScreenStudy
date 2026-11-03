@@ -1,5 +1,5 @@
 {
-  "version": "0.38",
+  "version": "0.39",
   "contents": [
     {
       "name": "01_离线日语语音_1.13.8.apk",
@@ -7,14 +7,14 @@
       "sha256": "ac65bfeba3b82d05303b153ee830d5c347858c02765254ef4bcf9b00e07ca22a"
     },
     {
-      "name": "02_双屏日语伴读_0.38.apk",
-      "size": 60772663,
-      "sha256": "7fb2e6753a7fb6820e62cbda8674753c463ac27cb77e9e5683d49a56b55dd1ad"
+      "name": "02_双屏日语伴读_0.39.apk",
+      "size": 60789047,
+      "sha256": "197e71e8a481356d621f44c37b999dc3cd451539f333787550fd936c029d8681"
     },
     {
       "name": "使用说明.txt",
       "size": 853,
-      "sha256": "58421bcd5e6df68821ecf8d6fd4cffe5d141cc488a92208e3e17150b7288666d"
+      "sha256": "1d2525bceb7e04ece8995186e3dcde16905d8677ce6d55f4eca1ca681459127b"
     }
   ],
   "voice": {
@@ -25,6 +25,6 @@
     "model": "supertonic-3-int8",
     "signature_sha256": "030a90bdd6e4c5eef1e161acfa6455a912c45cb2423b64df449ca88fdee097bb"
   },
-  "offline_voice_test": "PASS: bundled offline Japanese voice synthesized 122284 bytes; ScreenStudy SpeechReader completed real playback without network or extra voice downloads",
-  "zip_sha256": "d8e19deed1533088c2d0ad08a3ade83c10b92eced857b161907a9a09787329f6"
+  "offline_voice_test": "PASS: bundled offline Japanese voice synthesized 122284 bytes; voice=ja; ScreenStudy SpeechReader completed real playback without network or extra voice downloads",
+  "zip_sha256": "24e1f6f457c4cf753bcbb36bbd1d4775491f37e02d6db81941002f2d91aab15e"
 }

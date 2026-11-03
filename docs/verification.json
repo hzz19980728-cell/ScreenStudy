@@ -1,22 +1,19 @@
 {
-  "version": "0.38",
+  "version": "0.39",
   "apk": {
-    "version": "0.38",
-    "versionCode": 72,
+    "version": "0.39",
+    "versionCode": 73,
     "author": "快转风景Nevermore",
     "by": "By 快转风景Nevermore",
     "package": "local.screenstudy.mac",
     "debuggable": false,
-    "sha256": "7fb2e6753a7fb6820e62cbda8674753c463ac27cb77e9e5683d49a56b55dd1ad"
+    "sha256": "197e71e8a481356d621f44c37b999dc3cd451539f333787550fd936c029d8681"
   },
   "android_runtime": "13 / API 33",
-  "checks": {
-    "long-text-runtime": "PASS: 25 real Japanese OCR and offline long-translation transport assertions",
-    "reading-typography": "PASS: 513 reading typography, persistence and word-layout assertions",
-    "voice-selection": "PASS: 20 in-app voice selection and real offline playback assertions",
-    "compact": "PASS: 437 compact UI and navigation assertions",
-    "full-interaction": "PASS: 1233 Android interaction assertions (justified reading)",
-    "six-display-profiles": "PASS: 306 adaptive companion-window assertions across six width, height, density and font-scale profiles"
+  "final_apk_checks": {
+    "voice-picker-edges.txt": "PASS: 34 voice-picker cancellation, same-engine continuity, real-switch and unavailable-engine assertions",
+    "voice-selection.txt": "PASS: 20 in-app voice selection and real offline playback assertions",
+    "offline-tts.txt": "PASS: bundled offline Japanese voice synthesized 122284 bytes; voice=ja; ScreenStudy SpeechReader completed real playback without network or extra voice downloads"
   },
   "unit_checks": [
     "PASS: 325 stability and text-preservation assertions",
@@ -24,90 +21,87 @@
     "PASS: 36 OCR layout and preservation assertions",
     "PASS: observed Thor ruby and speaker boxes excluded",
     "PASS: 87 romaji answer checks",
-    "PASS: 48 dense OCR, inline-fragment and long-translation policy assertions"
+    "PASS: 84 dense OCR, inline-fragment and long-translation policy assertions",
+    "PASS: 38 conservative OCR repair and physical-row ordering assertions",
+    "PASS: 245 pixel-supported cursor and real-character preservation assertions",
+    "PASS: 97 pixel-supported ellipsis and separated-column preservation assertions",
+    "PASS: 46 OCR confidence alignment and invalid-score protection assertions",
+    "PASS: 22 image-supported split-glyph repair and genuine-repeat preservation assertions"
   ],
-  "scope": "Real bundled Japanese OCR on a generated large-heading/small-body fixture; full preservation of engine-recognized body rows. Actual translator request and response handling exercised with offline HTTP fixtures, including provider-marked incomplete results. Existing typography, engine selection, offline playback and interaction checks rerun. No live provider semantic-quality evaluation.",
-  "display_profiles": [
+  "offline_voice": {
+    "requested_engine": "com.k2fsa.sherpa.onnx.tts.engine",
+    "voice_name": "ja",
+    "sample_rate": 44100,
+    "channels": 1,
+    "seconds": 1.3859410430839003,
+    "rms": 1655.045144870938,
+    "peak": 8546,
+    "active_default_network": "none",
+    "synthesis_completed": true,
+    "app_real_playback_completed": true
+  },
+  "earlier_candidate_checks": [
     {
-      "width": 1240,
-      "height": 1080,
-      "dpi": 369,
-      "fontScale": 1.0,
-      "result": "PASS: 51 adaptive companion-window assertions"
+      "apk_sha256": "247917ca99798607776dad08d60449c142c7affd9dd22cd6ec8d03d65d50f6d2",
+      "scope": "CJK mixed-script/paint bounds and resize; 150 layouts, 1261 assertions; typography/lookup 1028; follow/pause/late-result 84. Final APK only changes voice-picker behavior.",
+      "checks": {
+        "cjk-final-normal": "PASS: 566 mixed-script translation, pixel-boundary and resize assertions across 75 layouts",
+        "cjk-final-short-font1.3": "PASS: 695 mixed-script translation, pixel-boundary and resize assertions across 75 layouts",
+        "typography-final-normal": "PASS: 514 reading typography, persistence and word-layout assertions",
+        "typography-final-short-font1.3": "PASS: 514 reading typography, persistence and word-layout assertions",
+        "follow-final": "PASS: 45 Android interaction assertions (justified reading)",
+        "follow-edges-final": "PASS: 39 Android interaction assertions (justified reading)"
+      }
     },
     {
-      "width": 960,
-      "height": 720,
-      "dpi": 320,
-      "fontScale": 1.0,
-      "result": "PASS: 51 adaptive companion-window assertions"
+      "apk_sha256": "8a9b67bcdf7986fde8953c541f16e3fe906e813db7b13c0b074eab26918134f9",
+      "scope": "Wrapped-word spacing and last-line touch across 96 layouts; tokenizer-to-reading source preservation over 114 sentences and 198 layouts.",
+      "checks": {
+        "wrapped-normal": "PASS: 198 wrapped-word spacing, geometry and last-line touch assertions across 24 cases and 48 layouts",
+        "wrapped-short-font1.3": "PASS: 198 wrapped-word spacing, geometry and last-line touch assertions across 24 cases and 48 layouts",
+        "typography-normal": "PASS: 514 reading typography, persistence and word-layout assertions",
+        "typography-short-font1.3": "PASS: 514 reading typography, persistence and word-layout assertions",
+        "follow-normal": "PASS: 45 Android interaction assertions (justified reading)",
+        "follow-edges": "PASS: 39 Android interaction assertions (justified reading)",
+        "reading-integrity": "PASS: 14235 tokenizer-to-reading preservation assertions across 114 corpus sentences and 198 rendered layouts"
+      }
     },
     {
-      "width": 720,
-      "height": 960,
-      "dpi": 320,
-      "fontScale": 1.0,
-      "result": "PASS: 51 adaptive companion-window assertions"
-    },
-    {
-      "width": 1280,
-      "height": 720,
-      "dpi": 240,
-      "fontScale": 1.0,
-      "result": "PASS: 51 adaptive companion-window assertions"
-    },
-    {
-      "width": 960,
-      "height": 640,
-      "dpi": 320,
-      "fontScale": 1.0,
-      "result": "PASS: 51 adaptive companion-window assertions"
-    },
-    {
-      "width": 960,
-      "height": 720,
-      "dpi": 320,
-      "fontScale": 1.3,
-      "result": "PASS: 51 adaptive companion-window assertions"
+      "apk_sha256": "2939e1a0ca92a05455358b9263a17a216fc24267d644f8fb07a70c27faf6b603",
+      "scope": "120 private source screenshots in two crop modes; real bundled OCR and generated dense-body/side-column fixture.",
+      "checks": {
+        "ocr-refinement": "PASS: 124 actual OCR refinement, failure fallback, timeout and source ownership assertions",
+        "long-text-runtime": "PASS: 34 real Japanese OCR and offline long-translation transport assertions",
+        "split-glyph-repair": "PASS: 22 image-supported split-glyph repair and genuine-repeat preservation assertions",
+        "extended-ocr-replay": "120 private screenshots through direct and capture-style Canvas crops; all cleaned outputs match the preceding local candidate in both modes.",
+        "inherited-ui-evidence": {
+          "reading-typography": "PASS: 513 reading typography, persistence and word-layout assertions",
+          "voice-selection": "PASS: 20 in-app voice selection and real offline playback assertions",
+          "compact": "PASS: 437 compact UI and navigation assertions",
+          "full-interaction": "PASS: 1233 Android interaction assertions on the first probe APK; final OCR-only score and pixel-marker gates did not change UI implementations.",
+          "six-display-profiles": "PASS: 306 adaptive companion-window assertions across six display profiles"
+        },
+        "inherited-evidence-scope": "Prior voice, display-profile, interaction and tokenizer-to-reading checks are inherited and were not repeated in full. Current patch changes only long-paragraph column selection; relevant OCR, cleanup and source-preservation checks were rerun.",
+        "inherited-reading-integrity": {
+          "result": "PASS: 14235 tokenizer-to-reading preservation assertions across 114 corpus sentences and 198 rendered layouts",
+          "apk_sha256": "d16fd5c2c8c120e26c2aa82dd21e38c104619c62aa8a0a4925b608859926b289",
+          "repeated_this_round": false
+        },
+        "dense-column": "PASS: 36 additional scaled layout counterexamples plus real OCR and full production-pipeline reproduction; body, indented/short ending, linebreak and sensitive-content behavior checked."
+      },
+      "unique_screenshot_count": 120,
+      "crop_modes": [
+        "direct",
+        "canvas"
+      ]
     }
   ],
-  "physical_device": {
-    "model": "AYN Thor",
-    "android": "13",
-    "installed_version": "0.38",
-    "game": "Higurashi no Naku Koro ni Hou",
-    "checks": [
-      "Covered installation: pre/post exported words, learning state and game profiles are identical.",
-      "In-app speech engine picker opens and accepts the bundled engine without exiting; TextToSpeech binds to the offline engine.",
-      "25 dialogue screens compared manually against upper/lower captures; no reader crash or complete body-row omission observed in this sample.",
-      "Long backlog output can scroll to its end and reach the translation button."
-    ],
-    "extended_gameplay": {
-      "started_at": "2026-11-02T17:48:08.432926+00:00",
-      "ended_at": "2026-11-02T18:12:31.906644+00:00",
-      "observed_seconds": 1463.5,
-      "dialogue_screens": 25,
-      "normal_dialogue_lines_per_screen": "1-3",
-      "extra_scenario": "Backlog range coverage, footer contamination and companion scrolling",
-      "capture_crop_normalized": [
-        0,
-        0.55,
-        1,
-        1
-      ]
-    },
-    "remaining_issues": [
-      "Single-character omissions and substitutions are present in saved original Japanese text, before reader layout.",
-      "Voicing marks, small kana, ellipses and an advance cursor can be misrecognized.",
-      "Full-screen backlog text outside the selected lower-half crop is not captured; footer controls inside the crop can be included."
-    ],
-    "raw_ocr_replay": {
-      "private_screenshots": 13,
-      "variants_per_image": 4,
-      "completed": true,
-      "finding": "The raw recognizer can omit the first character of the Japanese ochre-color word before OcrText cleanup. Cropping, scaling and binarization do not consistently improve every sample.",
-      "limitation": "Screenshot replay is diagnostic. Its pixels and output may differ from a live MediaProjection frame; it is not a general accuracy pass."
-    },
-    "translation_status": "Japanese OCR-only testing requested by user. No real translation API calls."
-  }
+  "physical_device_scope": "Earlier releases and candidates were compared on AYN Thor / Android 13. Final APK was verified on the dedicated local emulator; no fresh final-build handheld gameplay pass is claimed.",
+  "limitations": [
+    "No live translation-provider semantic-accuracy evaluation.",
+    "Complex glyphs, voicing marks, small kana and punctuation remain fallible.",
+    "Screenshot replay and generated fixtures are not general accuracy measurements.",
+    "Other dual-screen brands have not all been tested on physical hardware."
+  ],
+  "privacy": "Only summarized results are published. Private screenshots, device exports, learning data, credentials, keystores and maintenance files are excluded."
 }

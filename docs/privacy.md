@@ -1,6 +1,6 @@
 # 数据与隐私说明
 
-适用版本：ScreenStudy / 双屏日语伴读 0.38 · By 快转风景Nevermore
+适用版本：ScreenStudy / 双屏日语伴读 0.39 · By 快转风景Nevermore
 
 ## 屏幕和翻译
 
